@@ -1,11 +1,8 @@
 '''ATIVIDADE
 
-Defina uma classe com pelo menos 1 atributo e com os
-getters/setters no modo pythônico
-• Solicite ao usuário digitar os valores para criação de um objeto da
-classe criada
-• Crie um objeto da classe criada usando os valores digitados pelo
-usuário
+Defina uma classe com pelo menos 1 atributo e com os getters/setters no modo pythônico
+• Solicite ao usuário digitar os valores para criação de um objeto da classe criada
+• Crie um objeto da classe criada usando os valores digitados pelo usuário
 • Exiba na tela os valores atributos do objeto criado
 • Altere os atributos do objeto
 • Exiba os valores atributos do objeto criado mais uma vez'''
