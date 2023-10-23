@@ -1,0 +1,46 @@
+'''ATIVIDADE
+
+Defina uma classe com pelo menos 1 atributo e com os
+getters/setters no modo pythônico
+• Solicite ao usuário digitar os valores para criação de um objeto da
+classe criada
+• Crie um objeto da classe criada usando os valores digitados pelo
+usuário
+• Exiba na tela os valores atributos do objeto criado
+• Altere os atributos do objeto
+• Exiba os valores atributos do objeto criado mais uma vez'''
+
+#código incompleto
+
+class Vestido:
+    def __init__(self, cor = input('Digite a cor do vestido: '), tamanho = input('Qual o tamanho? ')):
+        self.__cor = cor
+        self.__tamanho = tamanho
+        respostas.append(self.__cor)
+        respostas.append(self.__tamanho)
+    
+    @property
+    def cor(self):
+        return self.__cor
+    
+    @cor.setter
+    def cor(self, cor):
+        self.__cor = cor
+    
+    @property
+    def tamanho(self):
+        return self.__tamanho
+    
+    @tamanho.setter
+    def tamanho(self, tamanho):
+        self.__tamanho = tamanho
+
+#objeto
+dress = Vestido(cor, tamanho)
+print(f'O vestido é {dress.cor} e {dress.tamanho}')
+
+#alterando valores
+dress.__cor = 'Verde'
+dress.__tamanho = 'Longo'
+print(dress.cor)
+print(f'O vestido é {dress.cor} e {dress.tamanho}') 
