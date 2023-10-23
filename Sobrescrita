@@ -11,42 +11,48 @@ dos métodos deverá exibir uma mensagem conforme a seguir:
 • Aluno: “Vou estudar pra tirar 100 em POO!!!” '''
 
 class Integrante_IFRN:
-    def __init__(self, nome, ano_entrada = int):
+    def __init__(self, nome):
         self.nome = nome
-        self.ano_entrada = ano_entrada
-    
-    def exibir_mensagem():
+
+    def saudacao(self):
+        print(f'Olá, me chamo {self.nome} e sou o(a) reitor(a) do Instituto Federal do Rio Grande do Norte!')
+
+    def exibir_mensagem(self):
         print('Seja bem vindo(a) ao IFRN!!!')
 
-class Professor:
-    def __init__(self, nome, ano_entrada, materia):
-        super().__init__(nome, ano_entrada)
+class Professor(Integrante_IFRN):
+    def __init__(self, nome, materia):
+        super().__init__(nome)
         self.materia = materia
 
     def apresentar(self):
-        print(f'Olá! Meu nome é {self.nome} e sou professor(a) de {self.materia} há {2023 - self.ano_entrada} anos no instituto!') 
+        print(f'Olá! Meu nome é {self.nome} e sou professor(a) de {self.materia} no instituto!')
 
-    def exibir_mensagem():
+    def exibir_mensagem(self):
         print('Meus alunos são os melhores!!!')
 
-class Aluno:
+class Aluno(Integrante_IFRN):
     def __init__(self, nome, ano_entrada):
-        super().__init__(nome, ano_entrada)
+        super().__init__(nome)
+        self.ano_entrada = ano_entrada
 
     def apresentar(self):
         if self.ano_entrada < 2023:
-            estudante = 'veterano'
+            estudante = 'veterano(a)'
         elif self.ano_entrada == 2023:
-            estudante = 'calouro'
-        print(f'Olá! Sou {self.nome} e entrei em {self.ano_entrada} no IFRN. Portanto, sou {estudante}')
+            estudante = 'calouro(a)'
+        print(f'Olá, sou {self.nome} e entrei em {self.ano_entrada} no IFRN. Portanto, sou {estudante}.')
         
-    def exibir_mensagem():
+    def exibir_mensagem(self):
         print('Vou estudar para tirar 100 em POO!!!')
 
-#imprimir a classe mae
-p = Professor('Fernando', 2013, 'Biologia')
+i = Integrante_IFRN('Arnóbio')
+p = Professor('Fernando', 'Biologia')
 a = Aluno('Alice', 2023)
 
-p.exibir_mensagem()
+i.saudacao()
+i.exibir_mensagem()
 p.apresentar()
-p.exibir_mensagem() 
+p.exibir_mensagem()
+a.apresentar()
+a.exibir_mensagem()
