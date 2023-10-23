@@ -29,16 +29,16 @@ class Vestido:
     
     @tamanho.setter
     def tamanho(self, tamanho):
-        self.__tamanho = tamanho
+        self.__tamanho = tamanho 
 
-cor=input("digite uma cor? ")
-tamanho = input("Qual o tamanho? ")
 #objeto
+cor = input('Digite a cor do vestido: ')
+tamanho = input('Qual o tamanho? ') 
 dress = Vestido(cor, tamanho)
-print(f'O vestido é {dress.cor} e {dress.tamanho}')
+print(f'O vestido tem cor {dress.cor} e é {dress.tamanho}')
 
 #alterando valores
-dress.__cor = 'Verde'
-dress.__tamanho = 'Longo'
+dress.__cor = 'verde'
+dress.__tamanho = 'longo'
 
-print(f'O vestido é {dress.__cor} e {dress.__tamanho}')
+print(f'O vestido é {dress.__cor} e {dress.__tamanho}') 
