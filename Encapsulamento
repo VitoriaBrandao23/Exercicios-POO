@@ -10,14 +10,10 @@ usuário
 • Altere os atributos do objeto
 • Exiba os valores atributos do objeto criado mais uma vez'''
 
-#código incompleto
-
 class Vestido:
-    def __init__(self, cor = input('Digite a cor do vestido: '), tamanho = input('Qual o tamanho? ')):
+    def __init__(self, cor, tamanho):
         self.__cor = cor
         self.__tamanho = tamanho
-        respostas.append(self.__cor)
-        respostas.append(self.__tamanho)
     
     @property
     def cor(self):
@@ -35,6 +31,8 @@ class Vestido:
     def tamanho(self, tamanho):
         self.__tamanho = tamanho
 
+cor=input("digite uma cor? ")
+tamanho = input("Qual o tamanho? ")
 #objeto
 dress = Vestido(cor, tamanho)
 print(f'O vestido é {dress.cor} e {dress.tamanho}')
@@ -42,5 +40,5 @@ print(f'O vestido é {dress.cor} e {dress.tamanho}')
 #alterando valores
 dress.__cor = 'Verde'
 dress.__tamanho = 'Longo'
-print(dress.cor)
-print(f'O vestido é {dress.cor} e {dress.tamanho}') 
+
+print(f'O vestido é {dress.__cor} e {dress.__tamanho}')
