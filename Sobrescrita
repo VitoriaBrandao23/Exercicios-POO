@@ -32,7 +32,7 @@ class Professor(Integrante_IFRN):
         print('Meus alunos são os melhores!!!')
 
 class Aluno(Integrante_IFRN):
-    def __init__(self, nome, ano_entrada):
+    def __init__(self, nome, ano_entrada = int):
         super().__init__(nome)
         self.ano_entrada = ano_entrada
 
