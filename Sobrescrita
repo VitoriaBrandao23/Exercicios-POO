@@ -20,30 +20,30 @@ class Integrante_IFRN:
 
 class Professor:
     def __init__(self, nome, ano_entrada, materia):
-        super.__init__(nome, ano_entrada)
+        super().__init__(nome, ano_entrada)
         self.materia = materia
 
-    def apresentar():
-        print(f'Olá! Meu nome é {self.nome} e sou professor(a) de {self.materia} no instituto!')
+    def apresentar(self):
+        print(f'Olá! Meu nome é {self.nome} e sou professor(a) de {self.materia} há {2023 - self.ano_entrada} anos no instituto!') 
 
     def exibir_mensagem():
         print('Meus alunos são os melhores!!!')
 
 class Aluno:
     def __init__(self, nome, ano_entrada):
-        super.__init__(nome, ano_entrada)
+        super().__init__(nome, ano_entrada)
 
-    if self.ano_entrada < 2023:
-        estudante = 'veterano'
-    elif self.ano_entrada == 2023:
-        estudante = 'calouro'
-
-    def apresentar():
+    def apresentar(self):
+        if self.ano_entrada < 2023:
+            estudante = 'veterano'
+        elif self.ano_entrada == 2023:
+            estudante = 'calouro'
         print(f'Olá! Sou {self.nome} e entrei em {self.ano_entrada} no IFRN. Portanto, sou {estudante}')
         
     def exibir_mensagem():
         print('Vou estudar para tirar 100 em POO!!!')
-    
+
+#imprimir a classe mae
 p = Professor('Fernando', 2013, 'Biologia')
 a = Aluno('Alice', 2023)
 
