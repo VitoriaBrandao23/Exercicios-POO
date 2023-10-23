@@ -1,0 +1,52 @@
+'''ATIVIDADE
+
+• Crie um programa em python contendo 3 classes: Integrante_IFRN,
+Professor, Aluno.
+• Integrante_IFRN será a superclasse e Professor e Aluno serão
+subclasses de Integrante_IFRN.
+• As três classes deverão conter o método exibirMensagem. Cada um
+dos métodos deverá exibir uma mensagem conforme a seguir:
+• Integrante_IFRN: “Seja bem vindo(a) ao IFRN!!!”
+• Professor: “Meus alunos são os melhores!!!”
+• Aluno: “Vou estudar pra tirar 100 em POO!!!” '''
+
+class Integrante_IFRN:
+    def __init__(self, nome, ano_entrada = int):
+        self.nome = nome
+        self.ano_entrada = ano_entrada
+    
+    def exibir_mensagem():
+        print('Seja bem vindo(a) ao IFRN!!!')
+
+class Professor:
+    def __init__(self, nome, ano_entrada, materia):
+        super.__init__(nome, ano_entrada)
+        self.materia = materia
+
+    def apresentar():
+        print(f'Olá! Meu nome é {self.nome} e sou professor(a) de {self.materia} no instituto!')
+
+    def exibir_mensagem():
+        print('Meus alunos são os melhores!!!')
+
+class Aluno:
+    def __init__(self, nome, ano_entrada):
+        super.__init__(nome, ano_entrada)
+
+    if self.ano_entrada < 2023:
+        estudante = 'veterano'
+    elif self.ano_entrada == 2023:
+        estudante = 'calouro'
+
+    def apresentar():
+        print(f'Olá! Sou {self.nome} e entrei em {self.ano_entrada} no IFRN. Portanto, sou {estudante}')
+        
+    def exibir_mensagem():
+        print('Vou estudar para tirar 100 em POO!!!')
+    
+p = Professor('Fernando', 2013, 'Biologia')
+a = Aluno('Alice', 2023)
+
+p.exibir_mensagem()
+p.apresentar()
+p.exibir_mensagem() 
